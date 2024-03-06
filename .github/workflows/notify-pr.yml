@@ -1,0 +1,15 @@
+name: Dispatch PR Opened
+on:
+  pull_request:
+    types: [opened]
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dispatch update to deployoment repository
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.PAT }}
+          repository: ${{ secrets.REPO }}
+          event-type: pr-opened
+          client-payload: '{"sha": "${{ github.sha }}"}'
