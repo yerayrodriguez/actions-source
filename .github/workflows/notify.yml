@@ -13,3 +13,4 @@ jobs:
           token: ${{ secrets.PAT }}
           repository: ${{ secrets.REPO }}
           event-type: update-submodule
+          client-payload: '{"sha": "${{ github.sha }}"}'
