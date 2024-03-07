@@ -12,4 +12,4 @@ jobs:
           token: ${{ secrets.PAT }}
           repository: ${{ secrets.REPO }}
           event-type: pr-opened
-          client-payload: '{"sha": "${{ github.sha }}", "name": "${{ github.head_ref }}", "pr": "${{ github.ref_name }}", "title": "${{ github.event.pull_request.title }}"}'
+          client-payload: '{"sha": "${{ github.sha }}", "name": "${{ github.head_ref }}", "title": "${{ github.event.pull_request.title }}"}'
