@@ -1,0 +1,32 @@
+{
+  "ES256K": {
+   "publicKeyJWK": {
+    "kty": "EC",
+    "x": "kJEywyrjP6Fw0K4DKgOKvXNivupTuocOCT49EShOE_k",
+    "y": "Rg6Dpxw49FoDZauIbb-zTgJDK73itIrsKS-W1nMQ5Y0",
+    "crv": "secp256k1"
+   },
+   "privateKeyJWK": {
+    "kty": "EC",
+    "x": "kJEywyrjP6Fw0K4DKgOKvXNivupTuocOCT49EShOE_k",
+    "y": "Rg6Dpxw49FoDZauIbb-zTgJDK73itIrsKS-W1nMQ5Y0",
+    "crv": "secp256k1",
+    "d": "IgZJ-8tiQdXI6oqiY4iz_Sp9-_-1QXzBLQK449Nrg-g"
+   }
+  },
+  "ES256": {
+   "publicKeyJWK": {
+    "kty": "EC",
+    "x": "4fBI1gjHOrMw8YzRaHfXjNQZmSkj--jgpgICuq4xHS0",
+    "y": "2iyhzezgw6ozRV-KU64z58BgfTfqftnbA2Zh11TW5pQ",
+    "crv": "P-256"
+   },
+   "privateKeyJWK": {
+    "kty": "EC",
+    "x": "4fBI1gjHOrMw8YzRaHfXjNQZmSkj--jgpgICuq4xHS0",
+    "y": "2iyhzezgw6ozRV-KU64z58BgfTfqftnbA2Zh11TW5pQ",
+    "crv": "P-256",
+    "d": "j4Cgv-F-J1HGOc37JjIhM9Xo8N2lHzLzd6l5fQ0auxk"
+   }
+  }
+ }
