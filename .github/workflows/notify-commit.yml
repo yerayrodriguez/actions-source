@@ -7,6 +7,15 @@ jobs:
   dispatch:
     runs-on: ubuntu-latest
     steps:
+      - name: Get teams
+        uses: tspascoal/get-user-teams-membership@v3
+        id: teams
+        with:
+          GITHUB_TOKEN: ${{ secrets.PAT }}
+          username: ${{ github.actor }}
+      - name: Echo teams
+        run: |
+          echo "${{ steps.teams.outputs.teams }}"
       - name: Dispatch update to deployoment repository
         uses: peter-evans/repository-dispatch@v3
         with:
