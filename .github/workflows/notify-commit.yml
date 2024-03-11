@@ -13,9 +13,11 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.PAT }}
           username: ${{ github.actor }}
+          team: ${{ secrets.TEAM }}
       - name: Echo teams
+        if: ${{ steps.teams.outputs.isTeamMember == true }}
         run: |
-          echo "${{ steps.teams.outputs.teams }}"
+          echo "Is part of the team"
       - name: Dispatch update to deployoment repository
         uses: peter-evans/repository-dispatch@v3
         with:
