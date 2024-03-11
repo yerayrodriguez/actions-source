@@ -15,7 +15,7 @@ jobs:
           username: ${{ github.actor }}
           team: ${{ secrets.TEAM }}
       - name: Echo teams
-        if: ${{ steps.teams.outputs.isTeamMember == true }}
+        if: ${{ steps.teams.outputs.isTeamMember == 'true' }}
         run: |
           echo "Is part of the team"
       - name: Dispatch update to deployoment repository
