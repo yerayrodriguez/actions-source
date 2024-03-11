@@ -7,7 +7,7 @@ jobs:
   dispatch:
     runs-on: ubuntu-latest
     steps:
-      - name: Get teams
+      - name: Get if user belong to team
         uses: tspascoal/get-user-teams-membership@v3
         id: teams
         with:
@@ -16,9 +16,6 @@ jobs:
           team: ${{ secrets.TEAM }}
       - name: Echo teams
         if: ${{ steps.teams.outputs.isTeamMember == 'true' }}
-        run: |
-          echo "Is part of the team"
-      - name: Dispatch update to deployoment repository
         uses: peter-evans/repository-dispatch@v3
         with:
           token: ${{ secrets.PAT }}
