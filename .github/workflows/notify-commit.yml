@@ -14,7 +14,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.PAT }}
           username: ${{ github.actor }}
           team: ${{ secrets.TEAM }}
-      - name: Echo teams
+      - name: Send notify msg
         if: ${{ steps.teams.outputs.isTeamMember == 'true' }}
         uses: peter-evans/repository-dispatch@v3
         with:
